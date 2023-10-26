@@ -1,5 +1,6 @@
 import pygame
 class Button():
+    #đối số lần lượt là: ảnh button,vị trí vẽ, text trên nút,font chữ, màu khi chưa hover,màu khi chuột hover vào
     def __init__(self,image,pos,text_input,font,base_color,hovering_color):
         self.image=image #
         self.font=font #phông chữ
@@ -14,18 +15,18 @@ class Button():
     
     #hiển thị hình ảnh và văn bản
     def update(self,screen):
-        # ở đây self.image luôn khác rỗng vì nếu không có hình ảnh ta sẽ in ra nguyên chữ vì đã gán nó ở dòng 12
+        # ở đây self.image luôn khác rỗng vì nếu không có hình ảnh ta sẽ in ra nguyên chữ (vì đã gán nó ở dòng 12)
         if self.image is not None: #kiểm tra xem nếu nó khác rỗng thì in ra hình ảnh
             screen.blit(self.image,self.img_rect)
         screen.blit(self.text,self.text_rect)
     
-    #check click vào khu vực nút
+    #check click vào khu vực nút , đối số là vị trí tọa độ của chuột
     def checkForInput(self,position):
         if position[0] in range (self.img_rect.left,self.img_rect.right) and position[1] in range (self.img_rect.top,self.img_rect.bottom):
             return True
         return False
     
-    #check click vào khu vực nút and Hover
+    #check click vào khu vực nút and Hover,đối số là vị trí tọa độ của chuột
     def changeColor(self,position):
         if position[0] in range (self.img_rect.left,self.img_rect.right) and position[1] in range (self.img_rect.top,self.img_rect.bottom):
             self.text=self.font.render(self.text_input,True,self.hovering_color)
