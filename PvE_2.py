@@ -15,7 +15,7 @@ global screen, Rect, clock
 HEIGHT, WIDTH = 600, 800
 SIZE_TANK = 25
 stt = Status.Status()
-
+#test
 with open('level.txt', 'r') as file:
     L = int(file.read())
 
