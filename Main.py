@@ -89,7 +89,7 @@ while True:
     LIST_OPTIONS.append(QUIT_BUTTON)
     #vẽ văn bản Main Menu
 
-    # vẽ các nút chế độ trên màn hình menu
+    # vẽ các nút chế độ trên màn hình menuu
     for button in LIST_OPTIONS: 
         button.changeColor(MENU_MOUSE_POS) #truyền vị trí chuột để thay đổi màu
         button.update(SCREEEN)
