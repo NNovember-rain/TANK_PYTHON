@@ -6,7 +6,7 @@ import subprocess
 pygame.init()
 WIDTH_SCREEN=1220
 HEIGHT_SCREEN=700
-#tạo cửa sổ gâme
+
 SCREEEN=pygame.display.set_mode((WIDTH_SCREEN,HEIGHT_SCREEN))
 
 pygame.display.set_caption("Menu")
@@ -15,11 +15,11 @@ BG=pygame.transform.scale(BG,(WIDTH_SCREEN,HEIGHT_SCREEN))
 
 path = ''
 
-#hàm set thuộc tính cho font chữ với đối số là size chữ
+
 def get_font(size):
     return pygame.font.Font(r'images/font.ttf',size) #trả về kiểu font chữ and size
 
-def tutorial(): #tutorial screen
+def tutorial(): 
     # final = False
     Tutorial_Screen=pygame.image.load(r'images/game_ttral.jpg')
     Tutorial_Screen=pygame.transform.scale(Tutorial_Screen,(WIDTH_SCREEN,HEIGHT_SCREEN))
