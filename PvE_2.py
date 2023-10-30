@@ -12,7 +12,7 @@ import os
 from pgzero.actor import Actor
 global screen, Rect, clock
 
-HEIGHT, WIDTH = 600, 800
+HEIGHT, WIDTH = 600, 800 
 SIZE_TANK = 25
 stt = Status.Status()
 

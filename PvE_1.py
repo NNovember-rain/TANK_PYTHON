@@ -46,7 +46,7 @@ def draw():
 def update():
     global enemy_list
     tank.move('left', 'right', 'up', 'down', bg.wall_list) #di chuyển xe tăng mình
-    tank.add_bullet('bulletdark 2', 'space') #nạp đạn(màu đạn, nút để bắn)
+    tank.add_bullet('bulletdark2', 'space') #nạp đạn(màu đạn, nút để bắn)
     tank.set_bullet(4)  #tốc độ đạn bay
     tank.bullet_wall(bg.wall_list)  #đạn trúng tường
     tank.bullet_enemy(enemy_list)   #đạn trúng tank máy

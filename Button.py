@@ -1,22 +1,20 @@
 import pygame
 class Button():
-    #đối số lần lượt là: ảnh button,vị trí vẽ, text trên nút,font chữ, màu khi chưa hover,màu khi chuột hover vào
     def __init__(self,image,pos,text_input,font,base_color,hovering_color):
-        self.image=image #
-        self.font=font #phông chữ
-        self.x_pos,self.y_pos=pos[0],pos[1] #vị trí
+        self.image=image 
+        self.font=font 
+        self.x_pos,self.y_pos=pos[0],pos[1] 
         self.base_color,self.hovering_color=base_color,hovering_color 
-        self.text_input=text_input #chữ trên nút
-        self.text=self.font.render(self.text_input,True,self.base_color) #phương thức render tạo ra hình ảnh và vẽ lên bằng blit
-        if self.image is None: #check có img hay không
+        self.text_input=text_input 
+        self.text=self.font.render(self.text_input,True,self.base_color) 
+        if self.image is None: 
             self.image=self.text
         self.img_rect=self.image.get_rect(center=(self.x_pos,self.y_pos))
         self.text_rect=self.text.get_rect(center=(self.x_pos,self.y_pos))
     
-    #hiển thị hình ảnh và văn bản
+    #hiển thị button
     def update(self,screen):
-        # ở đây self.image luôn khác rỗng vì nếu không có hình ảnh ta sẽ in ra nguyên chữ (vì đã gán nó ở dòng 12)
-        if self.image is not None: #kiểm tra xem nếu nó khác rỗng thì in ra hình ảnh
+        if self.image is not None:
             screen.blit(self.image,self.img_rect)
         screen.blit(self.text,self.text_rect)
     
@@ -32,3 +30,4 @@ class Button():
             self.text=self.font.render(self.text_input,True,self.hovering_color)
         else:
             self.text=self.font.render(self.text_input,True,self.base_color)
+
